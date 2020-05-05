@@ -32,6 +32,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               outputPath: commonPaths.imagesFolder,
+              esModule: false,
             },
           },
         ],
