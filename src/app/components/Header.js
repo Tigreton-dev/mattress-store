@@ -7,7 +7,6 @@ const Header = () => {
     const dispatch = useDispatch();
     return (
         <div className="Header-container">
-            <div>MenuVisible: {MenuVisible}</div>
             <button onClick={() => dispatch(toggleMenu())} type="button">
                 X
             </button>

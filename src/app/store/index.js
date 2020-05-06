@@ -2,9 +2,9 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 //  reducer:
-import firstReducer from './reducers/firstReducer';
+import ToggleMenu from './reducers/ToggleMenu';
 
 const rootReducer = combineReducers({
-    miReducer: firstReducer,
+    MenuToggle: ToggleMenu,
 });
 export const store = createStore(rootReducer, applyMiddleware(thunk));
