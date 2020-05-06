@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useReducer, useEffect } from 'react';
 import useHttp from '../hooks/http';
+
+import Product from '../components/Product';
 
 const productsReducer = (currentProducts, action) => {
     switch (action.type) {
@@ -52,11 +54,29 @@ const Colchones = () => {
         }
     }, [responseData, values, reqIdentifer, isLoading, error]);
 
-
+    const products = [];
+    userProducts.map(element => {
+        products.push(
+            <Product
+                id={element.id}
+                name={element.name}
+                title={element.title}
+                description={element.description}
+                firmness={element.firmness}
+                breathability={element.breathability}
+                adaptability={element.adaptability}
+                price={element.price}
+                image={element.image}
+                featuredProduct={element.featuredProduct}
+                assessment={element.assessment}
+            />
+        );
+    });
 
     return (
         <div className="Mattress-container">
             <h1>Mattress</h1>
+            {products}
         </div>
     );
 };

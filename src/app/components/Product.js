@@ -4,11 +4,12 @@ import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 
 const Product = props => {
+    const { id, name, title, description, firmness, breathability, adaptability, price, image, featuredProduct, assessment } = props;
     const { isAdded, setIsAdded } = useState(false);
 
     return (
         <div className="product">
-            <h1 className="product-name">Colchón Elasticmax</h1>
+            <h1 className="product-name">{name}</h1>
             <div className="product-stars">	&#9733; 	&#9733; 	&#9733; 	&#9733; 	&#9733;</div>
 
             <div className="product-body">
@@ -20,8 +21,8 @@ const Product = props => {
                 </div>
 
                 <div className="product-description">
-                    <h4 className="product-title">Relaja tu cuerpo mientras descansas</h4>
-                    <p>Colchón viscoelástico de 6 cm. El colchón Elasticmax tiene firmeza intermedia resultando excelente para la reducción de presiones. 2 cm de viscoelástica natural acolchada de 80 kg de densidad y 4 cm de viscoelástica de 65 kg en su núcleo.</p>
+                    <h4 className="product-title">{title}</h4>
+                    <p>{description}</p>
                     <div className="product-characteristics">
                         <div>
                             <h5>Firmeza</h5>
