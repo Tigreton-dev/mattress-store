@@ -1,0 +1,46 @@
+.login-container {
+   
+    border: 1px solid red;
+    margin: auto;
+}
+.ContainerLogin {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    height: 350px;
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+    background: rgb(235, 235, 235);
+    margin: auto;
+  }
+  .ContainerLogin input {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 100%;
+    margin-top: 30px;
+    
+  }
+  .ContainerLogin button{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(48, 132, 241);
+    margin-top: 30px;
+  }
+  .license {
+    font-size: 11px;
+    color: rgb(119, 117, 117);
+  }
+
+  @media (max-aspect-ratio: 10/16) {
+    .ContainerLogin {
+      width: 100%;
+    }
+  }
