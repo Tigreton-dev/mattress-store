@@ -33,19 +33,13 @@ const SideBar = () => {
                     </div>
                 </NavLink>
 
-                <NavLink extact to="/colchones">
+                <NavLink extact to="/Mattress">
                     <div className="sideBar-link">
                         <img src={UsewrImage} className="sideBar-image" alt="" />
-                        <p>Colchones</p>
+                        <p>Mattress</p>
                     </div>
                 </NavLink>
 
-                <NavLink extact to="/somieres">
-                    <div className="sideBar-link">
-                        <img src={SettingsImage} className="sideBar-image" alt="" />
-                        <p>Somieres</p>
-                    </div>
-                </NavLink>
 
                 <NavLink extact to="/login">
                     <div className="sideBar-link">
