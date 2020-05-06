@@ -1,0 +1,42 @@
+.SideBar-container {
+    //background: orange;
+    max-width: 280px;
+    min-width: 280px;
+    height: 60vh;
+    overflow-y: scroll;
+    margin-right: 0;
+    background: rgb(230, 230, 230);
+    padding: 40px;
+}
+.sideBar-button {
+    display: none;
+}
+.sideBar-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.sideBar-link {
+    display: flex;
+    padding: 10px;
+}
+.sideBar-link:hover {
+    background: rgb(152, 152, 152);
+}
+
+@media only screen and (max-width: 1100px) {
+    .SideBar-container {
+        position: fixed;
+        left: -280px;
+        top: 0px;
+        transition: all 0.5s;
+        height: 100vh;
+        z-index: 1;
+    }
+    .sideBar-button {
+        display: inline;
+        position: relative;
+        top: -80px;
+        left: 180px;
+    }
+}
