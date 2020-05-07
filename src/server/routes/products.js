@@ -7,10 +7,10 @@ router.get('/', async (req, res) => {
     res.send(products);
 });
 
-router.get('/selected', async (req, res) => {
-    const param = req.query.foo;
-    const products = await Product.find({ grupo: param }).sort('name');
-    res.send(products);
+router.get('/:id', async (req, res) => {
+    const param = req.params.id;
+    const product = await Product.findById(param);
+    res.send(product);
 });
 
 module.exports = router;
