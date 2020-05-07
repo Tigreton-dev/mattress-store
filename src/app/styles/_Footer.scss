@@ -33,14 +33,22 @@ h3{
 .Footer-aboutCompany p {
     font-size: 15px;
 }
-.Footer-Connected, .Footer-Contact {
-   width: 60%;
+.Footer-Contact {
+   width: 600px;
    margin-right: 50px;
+}
+.Footer-Connected {
+    width: 50%;
+    margin-right: 50px;
+}
+.Footer-Connected h3{
+    text-align: center;
 }
 .Footer-Connected div{
     display: flex;
     height: 50px;
-    margin: 0;
+    margin: auto;
+    width: 250px;
 }
 .Footer-Connected div img {
     margin: auto 25px auto 0;
@@ -48,6 +56,7 @@ h3{
 .Footer-Connected div p {
     margin: 0;
     font-size: 16px;
+    padding: 10px;
 }
 .Footer-Connected div p:hover {
     color: rgb(45, 126, 231);
@@ -113,7 +122,7 @@ h3{
         margin-right: 20px;
      }
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1100px) {
     .Footer-copyrhigt{
         font-size: 12px;
         flex-direction: column; 
