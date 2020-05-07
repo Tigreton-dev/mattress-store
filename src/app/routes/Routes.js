@@ -3,7 +3,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Mattress from '../pages/Mattress';
-import Login from '../pages/Login';
+import BedBases from '../pages/BedBases';
 import Product from '../pages/ProductPage';
 
 const Routes = () => {
@@ -14,8 +14,8 @@ const Routes = () => {
                     <Route path="/Mattress">
                         <Mattress />
                     </Route>
-                    <Route path="/Login">
-                        <Login />
+                    <Route path="/BedBases">
+                        <BedBases />
                     </Route>
                     <Route path="/product/:Id">
                         <Product />

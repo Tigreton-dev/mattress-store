@@ -7,10 +7,10 @@ const Header = () => {
     const dispatch = useDispatch();
     return (
         <div className="Header-container">
-            <button onClick={() => dispatch(toggleMenu())} type="button">
+            <button className="Header-button" onClick={() => dispatch(toggleMenu())} type="button">
                 X
             </button>
-            <h1>Header</h1>
+            <h1>Mattress App</h1>
         </div>
     );
 };

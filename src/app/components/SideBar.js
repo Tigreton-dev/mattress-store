@@ -41,10 +41,10 @@ const SideBar = () => {
                 </NavLink>
 
 
-                <NavLink extact to="/login">
+                <NavLink extact to="/BedBases">
                     <div className="sideBar-link">
                         <img src={SettingsImage} className="sideBar-image" alt="" />
-                        <p>login</p>
+                        <p>Bed Bases</p>
                     </div>
                 </NavLink>
             </div>
