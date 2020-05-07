@@ -44,9 +44,10 @@ const ProductPage = props => {
         dispatch({ type: 'SET', products: responseData });
     }, [responseData, values, reqIdentifer, isLoading, error]);
 
+
     let values2 = (
         <Spinner color="primary" />);
-    if (userProducts !== null)
+    if (userProducts !== null) {
         values2 = (
             <div className="productPage-container">
                 <h1 className="product-name">{userProducts.name}</h1>
@@ -57,7 +58,7 @@ const ProductPage = props => {
                     <div className="productPage-left">
                         <div className="productPage-image">
                             <img
-                                src={"https://img4882.weyesimg.com/uploads/www.springmattressfactory.com/images/153985301300120.png"}
+                                src={require("../static/images/" + userProducts.image)}
                                 alt={name}
                             />
                         </div>
@@ -70,7 +71,7 @@ const ProductPage = props => {
                                     <Progress
                                         type="circle"
                                         width={70}
-                                        percent={70}
+                                        percent={userProducts.firmness}
                                     />
                                     <h5>intermediate</h5>
                                 </div>
@@ -80,17 +81,17 @@ const ProductPage = props => {
                                     <Progress
                                         type="circle"
                                         width={70}
-                                        percent={70}
+                                        percent={userProducts.breathability}
                                     />
                                     <h5>intermediate</h5>
                                 </div>
 
                                 <div className="product-characteristics-element">
-                                    <h5>Assessment</h5>
+                                    <h5>Adaptability</h5>
                                     <Progress
                                         type="circle"
                                         width={70}
-                                        percent={70}
+                                        percent={userProducts.adaptability}
                                     />
                                     <h5>intermediate</h5>
                                 </div>
@@ -117,14 +118,10 @@ const ProductPage = props => {
                                     </select>
                                 </div>
                             </div>
-
-
                             <button className="productPage-purchaseBox-addButton">ADD PRODUCT</button>
                         </div>
 
                     </div>
-
-
 
                 </div>
                 <div className="productPage-featured">
@@ -132,8 +129,9 @@ const ProductPage = props => {
                 </div>
             </div>
         )
+    }
     return (
-        <div className="productPage-container">
+        <div>
             {values2}
         </div>
     );
@@ -141,15 +139,3 @@ const ProductPage = props => {
 
 export default withRouter(ProductPage);
 
-/*
-<p>{userProducts.adaptability}</p>
-            <p>{userProducts.assessment}</p>
-            <p>{userProducts.breathability}</p>
-            <p>{userProducts.description}</p>
-            <p>{userProducts.featuredProduct}</p>
-            <p>{userProducts.firmness}</p>
-            <p>{userProducts.image}</p>
-            <p>{userProducts.name}</p>
-            <p>{userProducts.price}</p>
-            <p>{userProducts.title}</p>
-*/

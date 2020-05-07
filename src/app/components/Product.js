@@ -60,7 +60,7 @@ const Product = props => {
 
                 <div className="product-price">
                     <p className="product-price-value">{price} €</p>
-                    <Link to={`/product/${id}`} className="product-price-link">VER PRODUCTO</Link>
+                    <Link to={`/product/${id}`} className="product-price-link">WATCH PRODUCT</Link>
                 </div>
             </div>
         </div>

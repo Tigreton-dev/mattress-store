@@ -7,12 +7,26 @@
 @import 'Product';
 @import 'ProductPage';
 
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+.App-container {
+  margin: 0;
+  padding: 0;
+}
 .App-body {
     display: flex;
     width: 85vw;
-    max-width: 1700px;
+    max-width: 1400px;
     padding: 5px;
     margin: auto;
+}
+@media only screen and (max-width: 500px) {
+  .App-body {
+    width: 100vw;
+    margin: 0;
+}
 }
 
 
