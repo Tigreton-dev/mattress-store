@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 
+
+
 const Product = props => {
     const { id, name, title, description, firmness, breathability, adaptability, price, image, featuredProduct, assessment } = props;
     const { isAdded, setIsAdded } = useState(false);
-
+    console.log(image)
     return (
         <div className="product">
             <h1 className="product-name">{name}</h1>
@@ -15,7 +17,7 @@ const Product = props => {
             <div className="product-body">
                 <div className="product-image">
                     <img
-                        src={"https://img4882.weyesimg.com/uploads/www.springmattressfactory.com/images/153985301300120.png"}
+                        src={require(`../static/images/` + image)}
                         alt={name}
                     />
                 </div>
@@ -24,34 +26,34 @@ const Product = props => {
                     <h4 className="product-title">{title}</h4>
                     <p>{description}</p>
                     <div className="product-characteristics">
-                        <div>
-                            <h5>Firmeza</h5>
+                        <div className="product-characteristics-elem">
+                            <h5>Firmness</h5>
                             <Progress
                                 type="circle"
                                 width={70}
-                                percent={70}
+                                percent={firmness}
                             />
-                            <h5>intermedia</h5>
+                            <h5>intermediate</h5>
                         </div>
 
-                        <div>
-                            <h5>Transpirabilidad</h5>
+                        <div className="product-characteristics-elem">
+                            <h5>Breathability</h5>
                             <Progress
                                 type="circle"
                                 width={70}
-                                percent={70}
+                                percent={breathability}
                             />
-                            <h5>intermedia</h5>
+                            <h5>intermediate</h5>
                         </div>
 
-                        <div>
-                            <h5>Adaptabilidad</h5>
+                        <div className="product-characteristics-elem">
+                            <h5>Adaptability</h5>
                             <Progress
                                 type="circle"
                                 width={70}
-                                percent={70}
+                                percent={adaptability}
                             />
-                            <h5>intermedia</h5>
+                            <h5>intermediate</h5>
                         </div>
                     </div>
                 </div>
