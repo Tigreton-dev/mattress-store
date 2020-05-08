@@ -5,8 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../store/actions/ToggleMenu";
 
 import homeImage from '../static/images/home.png';
-import UsewrImage from '../static/images/user.png';
+import Mattress from '../static/images/mattress.png';
 import SettingsImage from '../static/images/settings.png';
+import BedBase from '../static/images/bedBase.png';
+
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const SideBar = () => {
     const MenuVisible = useSelector(state => state.MenuToggle.MenuVisible);
@@ -19,34 +22,45 @@ const SideBar = () => {
     }
     return (
         <div className="SideBar-container" style={menuStyle}>
-            <h1>Sidebar</h1>
             <button className="sideBar-button" onClick={() => dispatch(toggleMenu())} type="button">
                 X
             </button>
-            <div>
+            <div className="sideBar-menu">
+                <ListGroup>
+                    <ListGroupItem active tag="button" action>
+                        MENU
+                    </ListGroupItem>
+
+                    <ListGroupItem tag="button" action>
+                        <NavLink extact to="/">
+                            <div className="sideBar-link">
+                                <img src={homeImage} className="sideBar-image" alt="" />
+                                <h4>Home</h4>
+                            </div>
+                        </NavLink>
+                    </ListGroupItem>
+
+                    <ListGroupItem tag="button" action>
+                        <NavLink extact to="/Mattress">
+                            <div className="sideBar-link">
+                                <img src={Mattress} className="sideBar-image" alt="" />
+                                <h4>Mattress</h4>
+                            </div>
+                        </NavLink>
+                    </ListGroupItem>
+
+                    <ListGroupItem tag="button" action>
+                        <NavLink extact to="/BedBases">
+                            <div className="sideBar-link">
+                                <img src={BedBase} className="sideBar-image" alt="" />
+                                <h4>Bed Bases</h4>
+                            </div>
+                        </NavLink>
+                    </ListGroupItem>
 
 
-                <NavLink extact to="/">
-                    <div className="sideBar-link">
-                        <img src={homeImage} className="sideBar-image" alt="" />
-                        <p>Home</p>
-                    </div>
-                </NavLink>
 
-                <NavLink extact to="/Mattress">
-                    <div className="sideBar-link">
-                        <img src={UsewrImage} className="sideBar-image" alt="" />
-                        <p>Mattress</p>
-                    </div>
-                </NavLink>
-
-
-                <NavLink extact to="/BedBases">
-                    <div className="sideBar-link">
-                        <img src={SettingsImage} className="sideBar-image" alt="" />
-                        <p>Bed Bases</p>
-                    </div>
-                </NavLink>
+                </ListGroup>
             </div>
         </div>
     );

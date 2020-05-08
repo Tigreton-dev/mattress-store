@@ -8,7 +8,9 @@ const Header = () => {
     return (
         <div className="Header-container">
             <button className="Header-button" onClick={() => dispatch(toggleMenu())} type="button">
-                X
+                <div className="Header-butto-linen"></div>
+                <div className="Header-butto-linen"></div>
+                <div className="Header-butto-linen"></div>
             </button>
             <h1>Mattress App</h1>
         </div>

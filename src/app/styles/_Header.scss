@@ -10,11 +10,20 @@
 }
 .Header-button {
     display: none;
+    background: none;
+    border: none;
+}
+.Header-butto-linen {
+    width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
 }
 
 @media only screen and (max-width: 1300px) {
     .Header-button {
         display: inline;
         margin-right: 20px;
+
     }
 }
