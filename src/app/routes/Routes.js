@@ -8,7 +8,7 @@ import Product from '../pages/ProductPage';
 
 const Routes = () => {
     return (
-        <div>
+        <div className="routes">
             <div>
                 <Switch>
                     <Route path="/Mattress">
