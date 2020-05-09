@@ -1,14 +1,12 @@
 import React from 'react';
-import { CarouselItem, CarouselCaption } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Progress } from 'react-sweet-progress';
-import "react-sweet-progress/lib/style.css";
+import ProductCharacteristics from './ProductCharacteristics';
 
 const CarrouselItemComponent = props => {
     const { name, image, description, firmness, breathability, adaptability, price, id } = props.product;
     return (
-        <div className="prueba-car">
-            <div className="carrousel-left">
+        <div className="carrousel-item-container">
+            <div className="carrousel-item-left">
                 <h1>{name}</h1>
                 <div className="product-stars">	&#9733; 	&#9733; 	&#9733; 	&#9733; 	&#9733;</div>
                 <img
@@ -17,47 +15,20 @@ const CarrouselItemComponent = props => {
                 />
             </div>
 
-            <div className="carrousel-right">
+            <div className="carrousel-item-right">
                 <h3>Description</h3>
-
-                <div className="carrousel-description">
+                <div className="carrousel-item-description">
                     <p>{description}</p>
-                    <div className="product-characteristics">
-                        <div className="product-characteristics-elem">
-                            <h5>Firmness</h5>
-                            <Progress
-                                type="circle"
-                                width={70}
-                                percent={firmness}
-                            />
-                            <h5>intermediate</h5>
-                        </div>
-
-                        <div className="product-characteristics-elem">
-                            <h5>Breathability</h5>
-                            <Progress
-                                type="circle"
-                                width={70}
-                                percent={breathability}
-                            />
-                            <h5>intermediate</h5>
-                        </div>
-
-                        <div className="product-characteristics-elem">
-                            <h5>Adaptability</h5>
-                            <Progress
-                                type="circle"
-                                width={70}
-                                percent={adaptability}
-                            />
-                            <h5>intermediate</h5>
-                        </div>
-                    </div>
+                    <ProductCharacteristics
+                        firmness={firmness}
+                        breathability={breathability}
+                        adaptability={adaptability}
+                    />
                 </div>
 
-                <div className="carrousel-price">
-                    <div className="carrousel-value">{price} €</div>
-                    <Link to={`/product/${id}`} className="carrousel-link">WATCH PRODUCT</Link>
+                <div className="carrousel-item-price">
+                    <div className="carrousel-item-value">{price} €</div>
+                    <Link to={`/product/${id}`} className="carrousel-item-link">WATCH PRODUCT</Link>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-.product {
+.product-container {
     padding: 10px;
     margin-right: 40px;
     border-bottom: 1px solid rgb(218, 216, 216);
@@ -41,20 +41,6 @@
     padding-right: 10px;
   }
   .product-title{
-    font-weight: bold;
-  }
-  .product-characteristics {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .product-characteristics-elem {
-    margin: auto;
-  }
-  
-  .product-characteristics h5 {
-    font-size: 13px;
     font-weight: bold;
   }
   .product-price {

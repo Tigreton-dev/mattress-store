@@ -6,7 +6,6 @@ import { toggleMenu } from "../store/actions/ToggleMenu";
 
 import homeImage from '../static/images/home.png';
 import Mattress from '../static/images/mattress.png';
-import SettingsImage from '../static/images/settings.png';
 import BedBase from '../static/images/bedBase.png';
 
 import { ListGroup, ListGroupItem } from 'reactstrap';
@@ -57,9 +56,6 @@ const SideBar = () => {
                             </div>
                         </NavLink>
                     </ListGroupItem>
-
-
-
                 </ListGroup>
             </div>
         </div>
