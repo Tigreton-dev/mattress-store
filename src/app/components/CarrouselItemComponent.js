@@ -4,6 +4,7 @@ import ProductCharacteristics from './ProductCharacteristics';
 
 const CarrouselItemComponent = props => {
     const { name, image, description, firmness, breathability, adaptability, price, id } = props.product;
+
     return (
         <div className="carrousel-item-container">
             <div className="carrousel-item-left">

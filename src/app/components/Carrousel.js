@@ -7,25 +7,13 @@ const Carrousel = props => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
-    const next = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === products.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    }
-
-    const previous = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === 0 ? products.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-    }
-
     const slides = products.map((product) => {
         return (
             <CarouselItem
                 className="custom-tag"
                 tag="div"
                 onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
+                onExited={() => setAnimating(true)}
             >
                 <CarrouselItemComponent product={product} />
                 <CarouselCaption className="text-danger" />
@@ -37,8 +25,8 @@ const Carrousel = props => {
         <div>
             <Carousel activeIndex={activeIndex} >
                 {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                <CarouselControl />
+                <CarouselControl />
             </Carousel>
         </div>
     );

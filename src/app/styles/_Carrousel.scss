@@ -32,16 +32,23 @@
     margin-top: -30px;
 }
 .carrousel-item-value {
-    color: blue;
+    color: rgb(56, 174, 247);
     margin: 0;
     margin-top: 30px;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 .carrousel-item-link {
-    background: rgb(128, 128, 128);
-    float: right;
+    font-size: 14px;
+    background: black;
     color: white;
-    padding: 5px 10px 5px 10px;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    bottom: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -72,18 +79,19 @@
         align-items: center;
     }
     .carrousel-item-link {
-        background: rgb(81, 81, 81);
         height: 30px;
+        font-size: 14px;
+        background: black;
         color: white;
-        font-size: 12px;
-        padding: 0;
-        margin-left: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
+        border: none;
+        width: 145px;
+        padding-left: 15px;
+        padding-right: 15px;
+        bottom: 10px;
     }
     .carrousel-item-value { 
         margin: 0;
+        margin-right: 20px;
     }
 }
 @media only screen and (max-width: 450px) {
