@@ -7,10 +7,17 @@ router.get('/', async (req, res) => {
     res.send(products);
 });
 
+router.get('/featuredProducts', async (req, res) => {
+    const product = await Product.find({ featuredProduct: true });
+    res.send(product);
+});
+
 router.get('/:id', async (req, res) => {
     const param = req.params.id;
     const product = await Product.findById(param);
     res.send(product);
 });
+
+
 
 module.exports = router;
