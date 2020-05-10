@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Mattress Chipre",
+    "title": "The best ally for the growth of your children",
+    "description": "The Cyprus mattress stands out for its incredible value for money. Une quality in its materials and exclusive Maxcolchon Eco-Fresche treatment. 2.5 cm of Airsystem Supersoft in its padding and 4 cm of Viscoelastic Sensus breathable 65 kg in its core.",
+    "firmness": 7,
+    "breathability": 6,
+    "adaptability": 5,
+    "price": 265.30,
+    "image": "Chipre.jpg",
+    "featuredProduct": true,
+    "assessment": 3,
+    "type": "mattress"
+  },
+  {
+    "name": "Mattress Elasticmax",
+    "title": "Relax your body while you rest",
+    "description": "Memory foam mattress 6 cm. The Elasticmax mattress has intermediate firmness, being excellent for pressure reduction. 2 cm of 80 kg density padded natural memory foam and 4 cm of 65 kg memory foam at its core.",
+    "firmness": 6,
+    "breathability": 5,
+    "adaptability": 6,
+    "price": 325.10,
+    "image": "Elasticmax.jpg",
+    "featuredProduct": true,
+    "assessment": 3,
+    "type": "mattress"
+  },
+  {
+    "name": "Mattress Naturfresh",
+    "title": "Máxima evacuación del calor, el descanso más fresco",
+    "description": "Naturfresh mattress is recommended for hot people due to its maximum capacity for heat evacuation. 6 cm of perforated and breathable Sensus memory foam. 2 cm of DRY-FEEL upper that quickly evacuates heat and moisture. Firm mattress.",
+    "firmness": 9,
+    "breathability": 8,
+    "adaptability": 6,
+    "price": 445.32,
+    "image": "Naturfresh.jpg",
+    "featuredProduct": true,
+    "assessment": 4,
+    "type": "mattress"
+  },
+  {
+    "name": "Mattress Oximax",
+    "title": "You will sleep on a cloud",
+    "description": "Memory foam mattress 4 cm with a soft intermediate firmness, with Omnitemp memory foam block that adapts to your body while improving your blood circulation. Super soft upper padding and 4 cm of Omnitemp memory foam.",
+    "firmness": 5,
+    "breathability": 6,
+    "adaptability": 7,
+    "price": 375.12,
+    "image": "Oximax.jpg",
+    "featuredProduct": false,
+    "assessment": 4,
+    "type": "mattress"
+  },
+  {
+    "name": "Mattress Odín",
+    "title": "A better rest every night",
+    "description": "The 4 cm memory foam upper padding will make your mattress fit you. Ideal for reducing body pressure and improving blood circulation.",
+    "firmness": 8,
+    "breathability": 5,
+    "adaptability": 5,
+    "price": 223.56,
+    "image": "Odin.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "mattress"
+  },
+  {
+    "name": "Split Upholstered Base",
+    "title": "The most practical format",
+    "description": "The split upholstered base is divided into two parts, allowing greater ease of transportation and access to the home. An economic and simple option that guarantees a good rest. Legs included.",
+    "price": 92.13,
+    "image": "splitUpholsteredBase.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "base"
+  },
+  {
+    "name": "Bed base Lama 120",
+    "title": "Resistance and breathability for rest",
+    "description": "The Lama 120 Beech Bed Base is made of 120mm wide slats. The wide sheet allows more support to the mattress, providing greater firmness at rest. Robust, resistant and maintains the perfect ventilation of the mattresses. Bed base height without legs 5cm.",
+    "price": 92.13,
+    "image": "bedBaseLama120.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "base"
+  },
+  {
+    "name": "Premium Frame Upholstered Base",
+    "title": "Exclusivity at your fingertips!",
+    "description": "Maxcolchon in its continuous development of new products and designs offers you the Premium Frame Upholstered Base. Its innovative design allows the combination of the exceptional Aqualine fabric with the central non-slip fabric that maintains greater breathability of the mattresses.",
+    "price": 120.35,
+    "image": "premiumFrameUpholsteredBase.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "base"
+  },
+  {
+    "name": "Upholstered Base",
+    "title": "The perfection of the design adapted to rest",
+    "description": "The Just Sleep Upholstered Base, a new concept of rest that provides a modern design in three different upholsteries: Anthracite, Steel or Black.",
+    "price": 145.75,
+    "image": "upholsteredBase.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "base"
+  },
+  {
+    "name": "Articulated bed base",
+    "title": "Elegance and design for your rest",
+    "description": "The Just Sleep Articulated Bed Base with motor is an excellent option for rest. A novelty that you can acquire through Maxcolchon. Great elegance thanks to its careful aesthetics and avant-garde design, exterior upholstery with chenille to perfectly combine with any decoration, creating an excellent atmosphere in your bedroom.",
+    "price": 345.89,
+    "image": "articulatedBedBase.jpg",
+    "featuredProduct": false,
+    "assessment": 2,
+    "type": "base"
+  },
+]
