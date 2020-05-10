@@ -26,7 +26,7 @@ const BedBases = () => {
 
     useEffect(() => {
         sendRequest(
-            'http://localhost:3000/api/products',
+            'http://localhost:3000/api/products/base',
             'GET',
             null,
             null,
