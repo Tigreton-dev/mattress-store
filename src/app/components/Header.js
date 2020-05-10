@@ -1,12 +1,14 @@
-import React from 'react';
-import { useDispatch } from "react-redux";
-import { toggleMenu } from "../store/actions/ToggleMenu";
+import React, { useContext } from 'react';
+import { MenuContext } from '../context/MenuToggle-context';
 
 const Header = () => {
-    const dispatch = useDispatch();
+    const toggleMenu = useContext(MenuContext).toggleMenu;
+
+    const toggleMenuHandler = () => toggleMenu();
+
     return (
         <div className="Header-container">
-            <button className="Header-button" onClick={() => dispatch(toggleMenu())} type="button">
+            <button className="Header-button" onClick={toggleMenuHandler} type="button">
                 <div className="Header-butto-linen"></div>
                 <div className="Header-butto-linen"></div>
                 <div className="Header-butto-linen"></div>

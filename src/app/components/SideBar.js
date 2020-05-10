@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../store/actions/ToggleMenu";
+import { MenuContext } from '../context/MenuToggle-context';
 
 import homeImage from '../static/images/home.png';
 import Mattress from '../static/images/mattress.png';
@@ -11,8 +10,11 @@ import BedBase from '../static/images/bedBase.png';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const SideBar = () => {
-    const MenuVisible = useSelector(state => state.MenuToggle.MenuVisible);
-    const dispatch = useDispatch();
+    const MenuVisible = useContext(MenuContext).MenuVisible;
+    const toggleMenu = useContext(MenuContext).toggleMenu;
+
+    const toggleMenuHandler = () => toggleMenu();
+
     let menuStyle = null;
     if (MenuVisible) {
         menuStyle = {
@@ -21,7 +23,7 @@ const SideBar = () => {
     }
     return (
         <div className="SideBar-container" style={menuStyle}>
-            <button className="sideBar-button" onClick={() => dispatch(toggleMenu())} type="button">
+            <button className="sideBar-button" onClick={toggleMenuHandler} type="button">
                 X
             </button>
             <div className="sideBar-menu">
