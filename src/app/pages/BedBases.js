@@ -26,7 +26,7 @@ const BedBases = () => {
 
     useEffect(() => {
         sendRequest(
-            'http://localhost:3000/api/products',
+            'http://localhost:3000/api/products/base',
             'GET',
             null,
             null,
@@ -75,7 +75,14 @@ const BedBases = () => {
 
     return (
         <div className="Mattress-container">
-            <h1>Mattress</h1>
+            <h1>Base Bed</h1>
+            <div className="Mattress-order">
+                <p>Order by</p>
+                <select className="Mattress-order-selector">
+                    <option value="volvo">Lowest to highest</option>
+                    <option value="saab">highest to Lowest</option>
+                </select>
+            </div>
             {products}
         </div>
     );

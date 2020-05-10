@@ -26,7 +26,7 @@ const Colchones = () => {
 
     useEffect(() => {
         sendRequest(
-            'http://localhost:3000/api/products',
+            'http://localhost:3000/api/products/mattress',
             'GET',
             null,
             null,

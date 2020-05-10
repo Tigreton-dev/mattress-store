@@ -7,6 +7,16 @@ router.get('/', async (req, res) => {
     res.send(products);
 });
 
+router.get('/mattress', async (req, res) => {
+    const products = await Product.find({ type: "mattress" }).sort('name');
+    res.send(products);
+});
+
+router.get('/base', async (req, res) => {
+    const products = await Product.find({ type: "base" }).sort('name');
+    res.send(products);
+});
+
 router.get('/featuredProducts', async (req, res) => {
     const product = await Product.find({ featuredProduct: true });
     res.send(product);
