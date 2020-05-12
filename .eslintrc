@@ -29,6 +29,10 @@
         ]
       }
     ],
+    "no-restricted-syntax": off,
+    "no-underscore-dangle": off,
+    "global-require": off,
+    "import/no-dynamic-require": off,
   },
   "env": {
     "es6": true,

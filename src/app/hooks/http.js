@@ -65,7 +65,7 @@ const useHttp = () => {
             .catch(error => {
                 dispatch({
                     type: 'ERROR',
-                    errorMessage: 'Something went wrong!',
+                    errorMessage: `${error} Something went wrong!`,
                 });
             });
     };
