@@ -11,7 +11,7 @@ const productsSchema = new mongoose.Schema({
     image: String,
     featuredProduct: Boolean,
     assessment: Number,
-    type: String
+    type: String,
 });
 
 const Product = mongoose.model('products', productsSchema);

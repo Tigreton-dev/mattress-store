@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { useReducer, useEffect } from 'react';
 import { Spinner } from 'reactstrap';
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
 import useHttp from '../hooks/http';
 import ProductInfo from '../components/ProductInfo';
@@ -15,7 +17,7 @@ const productsReducer = (currentProducts, action) => {
 };
 
 const ProductPage = props => {
-    const productId = props.match.params.Id;
+    const { Id } = props.match.params;
     const [userProducts, dispatch] = useReducer(productsReducer, null);
     const {
         isLoading,
@@ -28,7 +30,7 @@ const ProductPage = props => {
 
     useEffect(() => {
         sendRequest(
-            `http://localhost:3000/api/products/${productId}`,
+            `http://localhost:3000/api/products/${Id}`,
             'GET',
             null,
             null,
@@ -39,18 +41,14 @@ const ProductPage = props => {
     useEffect(() => {
         setTimeout(() => {
             dispatch({ type: 'SET', products: responseData });
-        }, 2000)
-
+        }, 2000);
     }, [responseData, values, reqIdentifer, isLoading, error]);
 
-    let product = (<Spinner color="primary" />);
-    if (userProducts !== null) product = (<ProductInfo productData={userProducts} />);
-    return (
-        <div>
-            {product}
-        </div>
-    );
+    let product = <Spinner color="primary" />;
+    if (userProducts !== null)
+        product = <ProductInfo productData={userProducts} />;
+
+    return <div>{product}</div>;
 };
 
 export default withRouter(ProductPage);
-

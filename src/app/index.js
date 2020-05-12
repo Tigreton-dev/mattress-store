@@ -17,4 +17,5 @@ function render(Component) {
         document.getElementById('app')
     );
 }
+
 render(App);

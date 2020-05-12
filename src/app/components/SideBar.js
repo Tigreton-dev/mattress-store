@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { ListGroup, ListGroupItem } from 'reactstrap';
 import { MenuContext } from '../context/MenuToggle-context';
 
 import homeImage from '../static/images/home.png';
 import Mattress from '../static/images/mattress.png';
 import BedBase from '../static/images/bedBase.png';
 
-import { ListGroup, ListGroupItem } from 'reactstrap';
-
 const SideBar = () => {
-    const MenuVisible = useContext(MenuContext).MenuVisible;
-    const toggleMenu = useContext(MenuContext).toggleMenu;
+    const { MenuVisible } = useContext(MenuContext);
+    const { toggleMenu } = useContext(MenuContext);
 
     const toggleMenuHandler = () => toggleMenu();
 
@@ -23,7 +21,11 @@ const SideBar = () => {
     }
     return (
         <div className="SideBar-container" style={menuStyle}>
-            <button className="sideBar-button" onClick={toggleMenuHandler} type="button">
+            <button
+                className="sideBar-button"
+                onClick={toggleMenuHandler}
+                type="button"
+            >
                 X
             </button>
             <div className="sideBar-menu">
@@ -35,7 +37,11 @@ const SideBar = () => {
                     <ListGroupItem tag="button" action>
                         <NavLink extact to="/">
                             <div className="sideBar-link">
-                                <img src={homeImage} className="sideBar-image" alt="" />
+                                <img
+                                    src={homeImage}
+                                    className="sideBar-image"
+                                    alt=""
+                                />
                                 <h4>Home</h4>
                             </div>
                         </NavLink>
@@ -44,7 +50,11 @@ const SideBar = () => {
                     <ListGroupItem tag="button" action>
                         <NavLink extact to="/Mattress">
                             <div className="sideBar-link">
-                                <img src={Mattress} className="sideBar-image" alt="" />
+                                <img
+                                    src={Mattress}
+                                    className="sideBar-image"
+                                    alt=""
+                                />
                                 <h4>Mattress</h4>
                             </div>
                         </NavLink>
@@ -53,7 +63,11 @@ const SideBar = () => {
                     <ListGroupItem tag="button" action>
                         <NavLink extact to="/BedBases">
                             <div className="sideBar-link">
-                                <img src={BedBase} className="sideBar-image" alt="" />
+                                <img
+                                    src={BedBase}
+                                    className="sideBar-image"
+                                    alt=""
+                                />
                                 <h4>Bed Bases</h4>
                             </div>
                         </NavLink>
