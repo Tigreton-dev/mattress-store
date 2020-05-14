@@ -43,7 +43,10 @@ const Carrousel = props => {
                 onExited={() => setAnimating(false)}
             >
                 <CarrouselItemComponent product={product} />
-                <CarouselCaption className="text-danger" />
+                <CarouselCaption
+                    captionText={product.name}
+                    className="text-danger"
+                />
             </CarouselItem>
         );
     });

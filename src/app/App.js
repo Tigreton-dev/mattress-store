@@ -8,9 +8,9 @@ import Routes from './routes/Routes';
 
 const App = () => {
     return (
-        <div className="App-container">
+        <div className="App-container" data-test="component-app">
             <Header />
-            <div className="App-body">
+            <div className="App-body" data-test="App-body">
                 <SideBar />
                 <Routes />
             </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+﻿import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import { MenuContext } from '../context/MenuToggle-context';
@@ -19,16 +19,22 @@ const SideBar = () => {
             left: '0px',
         };
     }
+
     return (
-        <div className="SideBar-container" style={menuStyle}>
+        <div
+            className="SideBar-container"
+            style={menuStyle}
+            data-test="component-sideBar"
+        >
             <button
                 className="sideBar-button"
                 onClick={toggleMenuHandler}
                 type="button"
+                data-test="sideBar-button"
             >
                 X
             </button>
-            <div className="sideBar-menu">
+            <div className="sideBar-menu" data-test="sideBar-menu">
                 <ListGroup>
                     <ListGroupItem active tag="button" action>
                         MENU
