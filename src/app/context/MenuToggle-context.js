@@ -7,7 +7,7 @@ export const MenuContext = React.createContext({
     toggleMenu: () => {},
 });
 
-export default props => {
+export const MenuProvider = props => {
     const { children } = props;
     const [isVisible, setIsVisible] = useState(false);
 

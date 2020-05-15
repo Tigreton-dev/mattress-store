@@ -44,6 +44,9 @@
       "^.+\\.(js|jsx)$": "babel-jest",
       ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
     },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
     "moduleFileExtensions": [
       "css",
@@ -64,8 +67,10 @@
     "config": "^3.3.1",
     "core-js": "3.6.5",
     "cors": "^2.8.5",
+    "enzyme-to-json": "^3.4.4",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
+    "jest-styled-components": "^7.0.2",
     "lodash": "4.17.15",
     "mongo": "^0.1.0",
     "mongoose": "^5.9.12",

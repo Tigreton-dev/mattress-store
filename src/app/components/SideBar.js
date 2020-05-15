@@ -8,8 +8,7 @@ import Mattress from '../static/images/mattress.png';
 import BedBase from '../static/images/bedBase.png';
 
 const SideBar = () => {
-    const { MenuVisible } = useContext(MenuContext);
-    const { toggleMenu } = useContext(MenuContext);
+    const { MenuVisible, toggleMenu } = useContext(MenuContext);
 
     const toggleMenuHandler = () => toggleMenu();
 
@@ -25,6 +24,7 @@ const SideBar = () => {
             className="SideBar-container"
             style={menuStyle}
             data-test="component-sideBar"
+            id="menuId"
         >
             <button
                 className="sideBar-button"
@@ -47,6 +47,7 @@ const SideBar = () => {
                                     src={homeImage}
                                     className="sideBar-image"
                                     alt=""
+                                    data-test="home-image"
                                 />
                                 <h4>Home</h4>
                             </div>
@@ -60,6 +61,7 @@ const SideBar = () => {
                                     src={Mattress}
                                     className="sideBar-image"
                                     alt=""
+                                    data-test="mattress-image"
                                 />
                                 <h4>Mattress</h4>
                             </div>
@@ -73,6 +75,7 @@ const SideBar = () => {
                                     src={BedBase}
                                     className="sideBar-image"
                                     alt=""
+                                    data-test="bedBase-image"
                                 />
                                 <h4>Bed Bases</h4>
                             </div>
