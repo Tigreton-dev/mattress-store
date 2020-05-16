@@ -1,10 +1,11 @@
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-
 import { BrowserRouter } from 'react-router-dom';
 import SideBar from '../src/app/components/SideBar';
 import { MenuProvider } from '../src/app/context/MenuToggle-context';
+
+import '@testing-library/jest-dom';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -57,5 +58,18 @@ describe('SideBar', () => {
         const wrapper = setup();
         const Component = findByTestAttr(wrapper, 'bedBase-image');
         expect(Component.length).toBe(1);
+    });
+
+    it('renders without crashing', () => {
+        const wrapper = setup();
+        const Component = findByTestAttr(wrapper, 'component-sideBar');
+        const button = findByTestAttr(wrapper, 'sideBar-button');
+        const prueba = findByTestAttr(wrapper, 'prueba');
+        expect(prueba.text()).toBe('false');
+        button.simulate('click');
+        expect(prueba.text()).toBe('true');
+        expect(Component.prop('isVisible')).toBeTruthy();
+        expect(Component.prop('isVisible')).toBeFalsy();
+        expect(Component.prop('style')).toHaveProperty('right', '0');
     });
 });

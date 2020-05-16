@@ -10,22 +10,27 @@ import BedBase from '../static/images/bedBase.png';
 const SideBar = () => {
     const { MenuVisible, toggleMenu } = useContext(MenuContext);
 
-    const toggleMenuHandler = () => toggleMenu();
-
-    let menuStyle = null;
+    let menuStyle = {
+        right: '0',
+    };
     if (MenuVisible) {
         menuStyle = {
+            right: '0',
             left: '0px',
         };
     }
+    const toggleMenuHandler = () => toggleMenu();
 
     return (
         <div
             className="SideBar-container"
             style={menuStyle}
             data-test="component-sideBar"
+            data-testid="component-sideBar-id"
             id="menuId"
+            isVisible={MenuVisible}
         >
+            <p data-test="prueba">{MenuVisible.toString()}</p>
             <button
                 className="sideBar-button"
                 onClick={toggleMenuHandler}
