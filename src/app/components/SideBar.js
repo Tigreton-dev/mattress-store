@@ -10,12 +10,9 @@ import BedBase from '../static/images/bedBase.png';
 const SideBar = () => {
     const { MenuVisible, toggleMenu } = useContext(MenuContext);
 
-    let menuStyle = {
-        right: '0',
-    };
+    let menuStyle = {};
     if (MenuVisible) {
         menuStyle = {
-            right: '0',
             left: '0px',
         };
     }
@@ -30,7 +27,6 @@ const SideBar = () => {
             id="menuId"
             isVisible={MenuVisible}
         >
-            <p data-test="prueba">{MenuVisible.toString()}</p>
             <button
                 className="sideBar-button"
                 onClick={toggleMenuHandler}

@@ -14,7 +14,11 @@ export const MenuProvider = props => {
     const toggleMenu = () => setIsVisible(!isVisible);
 
     return (
-        <MenuContext.Provider value={{ MenuVisible: isVisible, toggleMenu }}>
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        <MenuContext.Provider
+            value={{ MenuVisible: isVisible, toggleMenu }}
+            {...props}
+        >
             {children}
         </MenuContext.Provider>
     );

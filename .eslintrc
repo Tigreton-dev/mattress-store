@@ -33,6 +33,7 @@
     "no-underscore-dangle": off,
     "global-require": off,
     "import/no-dynamic-require": off,
+    "react/jsx-props-no-spreading": off,
   },
   "env": {
     "es6": true,
